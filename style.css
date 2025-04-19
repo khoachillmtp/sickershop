@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+  height: 40px;
+  cursor: pointer;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.container {
+  padding: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0); /* overlay tối */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.shop-button {
+  background-color: #fff;
+  color: #ff4d4f;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.shop-button:hover {
+  background-color: #e60000;
+}
+{
+      margin: 0;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo img {
+      height: 40px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .hero {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      padding: 20px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .shop-button {
+      background-color: #fff;
+      color: #333;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+    }
+    .shop-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+      nav a {
+        margin: 10px 0;
+      }
+      nav.active {
+        display: flex;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+      .hero p {
+        font-size: 0.9rem;
+      }
+      .shop-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="Brand Logo"></a>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="all-items.html">All Items</a>
+    </nav>
+  </header>
+
+  <div class="hero" style="background-image: url('hero-image.jpg');">
+    <div class="hero-content">
+      <h1>Welcome to Our Fashion Brand</h1>
+      <p>Discover timeless fashion pieces made with care and creativity.</p>
+      <a href="all-items.html" class="shop-button">Shop Now</a>
+    </div>
+  </div>

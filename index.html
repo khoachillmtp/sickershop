@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SICKERshop | Cửa hàng thời trang nghệ thuật</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ff4d4f;
+    }
+
+    .hero {
+      height: 100vh;
+      background-image: url('hero-image.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .shop-button {
+      background: #ff4d4f;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .shop-button:hover {
+      background: #e60000;
+    }
+
+    .story-section {
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .story-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .story-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .story-text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .story-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .story-image {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .story-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      background: #111;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        margin: 10px 20px;
+      }
+
+      .hero-content h1 { font-size: 2rem; }
+      .hero-content p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="imges/redlogo.png" alt="Brand Logo"></a>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="all-items.html">All Items</a>
+    </nav>
+  </header>
+
+  <div>
+    <div class="hero-content">
+      <h1>SICKERshop</h1>
+      <p>LÀM NGHỆ THUẬT BÁN THỜI GIAN KHÔNG BÁN THỜI TRANG.</p>
+      <a href="all-items.html" class="shop-button">Shop Now</a>
+    </div>
+  </div>
+
+  <section class="story-section">
+    <div class="story-content">
+      <div class="story-text">
+        <h2>"SICKERshop" stories:</h2>
+        <p>SICKERshop không chỉ đơn thuần là thời trang. Đó là hành trình nghệ thuật – nơi chúng tôi thể hiện cá tính, văn hóa đường phố và những giấc mơ được mặc lên người.</p>
+        <p>Từ những ý tưởng táo bạo đến từng chi tiết tinh tế, chúng tôi tin rằng mỗi thiết kế là một tuyên ngôn nghệ thuật mà bạn có thể mang theo mỗi ngày.</p>
+      </div>
+      <div class="story-image">
+        <img src="imges/Thrasher sk8 group.jpg" alt="Câu chuyện SICKERshop">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 SICKERshop. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
